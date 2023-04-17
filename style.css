@@ -90,7 +90,7 @@ section {
     -webkit-text-stroke: 0vw #000000;
     border-right: 2px solid #18b8f8;
     overflow: hidden;
-    animation: animate 9s linear infinite;
+    animation: animate 4s linear infinite;
 }
 
 @keyframes animate {
@@ -213,7 +213,7 @@ section {
 
     to {
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateX(80%);
     }
 }
 
@@ -462,7 +462,7 @@ section {
         -webkit-text-stroke: 0vw #000000;
         border-right: 2px solid #18b8f8;
         overflow: hidden;
-        animation: animate 17s linear infinite;
+        animation: animate 6s linear infinite;
         font-size: 1em;
     }
     
@@ -494,7 +494,7 @@ section {
     }
     .animate {
         animation-name: fade-out;
-        animation-duration: 17s;
+        animation-duration: 3s;
         animation-fill-mode: forwards;
     }
     
@@ -624,7 +624,7 @@ section {
         -webkit-text-stroke: 0vw #000000;
         border-right: 2px solid #18b8f8;
         overflow: hidden;
-        animation: animate 17s linear infinite;
+        animation: animate 3s linear infinite;
         font-size: 1em;
     }
     
@@ -656,7 +656,7 @@ section {
     }
     .animate {
         animation-name: fade-out;
-        animation-duration: 17s;
+        animation-duration: 3s;
         animation-fill-mode: forwards;
     }
     
@@ -665,11 +665,12 @@ section {
             opacity: 1;
             transform: translateX(0%);
             position: relative;
+            padding: 0;
         }
     
         to {
             opacity: 0;
-            transform: translateX(100%);
+            transform: translateX(35%);
         }
     }
     }
@@ -779,16 +780,17 @@ section {
             color: rgb(60, 239, 252);
             font-size: .9em;
             font-weight: 700;
-            letter-spacing: 1px;
+            
             margin-top: 10px;
             margin-bottom: 30px;
             position: relative;
+            padding: 0;
         
         
         }
         .animate {
             animation-name: fade-out;
-            animation-duration: 20s;
+            animation-duration: 3s;
             animation-fill-mode:forwards;
         }
         
@@ -796,12 +798,13 @@ section {
             from {
                 opacity: 1;
                 transform: translateX(0%);
-                position:-webkit-sticky;
+                position:relative;
+                padding: 0;
             }
         
             to {
-                opacity: -10;
-                transform: translateX(100%);
+                opacity: -1;
+                transform: translateX(15%);
             }
         }
         .footer{
