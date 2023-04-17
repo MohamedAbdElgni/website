@@ -462,7 +462,7 @@ section {
         -webkit-text-stroke: 0vw #000000;
         border-right: 2px solid #18b8f8;
         overflow: hidden;
-        animation: animate 5s linear infinite;
+        animation: animate 17s linear infinite;
         font-size: 1em;
     }
     
@@ -494,7 +494,7 @@ section {
     }
     .animate {
         animation-name: fade-out;
-        animation-duration: 5s;
+        animation-duration: 17s;
         animation-fill-mode: forwards;
     }
     
@@ -530,26 +530,25 @@ section {
     
     }
     .footer .social-icons a {
-        font-size: 14px;
-        padding: 5px;
+        font-size: 10px;
+        padding: 7px;
         justify-content: center;
-        margin-top: 25px;
-        margin-bottom: 5px;
+
     }
     
     .footer-title {
-        font-size: 10px;
+        font-size: 15px;
         text-align: center;
         
-        margin-top: 25px;
-        margin-bottom: 15px;
+        margin-top: 10px;
+        margin-bottom: 30px;
     }
     .footer .social-icons {
         font-size: 10px;
         
         
-        margin-top: 25px;
-        margin-bottom: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     
 }
@@ -559,7 +558,7 @@ section {
         background-color: rgb(20, 19, 19);
         width: 100%;
         position: fixed;
-        z-index: 999;
+        z-index: 700;
         display: flex;
         justify-content: space-between 5px;
         align-items: center;
@@ -625,7 +624,7 @@ section {
         -webkit-text-stroke: 0vw #000000;
         border-right: 2px solid #18b8f8;
         overflow: hidden;
-        animation: animate 5s linear infinite;
+        animation: animate 17s linear infinite;
         font-size: 1em;
     }
     
@@ -657,7 +656,7 @@ section {
     }
     .animate {
         animation-name: fade-out;
-        animation-duration: 7s;
+        animation-duration: 17s;
         animation-fill-mode: forwards;
     }
     
@@ -689,7 +688,7 @@ section {
             justify-content: space-between;
             align-items: center;
             flex-direction: row;
-            padding: 10px 15px;
+            padding: 10px 20px;
         }
             
         section {
@@ -756,7 +755,7 @@ section {
             -webkit-text-stroke: 0vw #000000;
             border-right: 2px solid #18b8f8;
             overflow: hidden;
-            animation: animate 5s linear infinite;
+            animation: animate 3s linear infinite;
             font-size: 1em;
         }
         
@@ -789,21 +788,61 @@ section {
         }
         .animate {
             animation-name: fade-out;
-            animation-duration: 15s;
-            animation-fill-mode: forwards;
+            animation-duration: 20s;
+            animation-fill-mode:forwards;
         }
         
         @keyframes fade-out {
             from {
                 opacity: 1;
                 transform: translateX(0%);
-                position: relative;
+                position:-webkit-sticky;
             }
         
             to {
-                opacity: -5;
+                opacity: -10;
                 transform: translateX(100%);
             }
+        }
+        .footer{
+        background-color:rgb(20, 19, 19);
+        color: #ffffff;
+        padding: 3em;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    
+        .footer-title span{
+            color: #18b8f8;
+        
+        }
+        
+        .social-icons a:hover {
+            color: #18b8f8;
+        
+        }
+        .footer .social-icons a {
+            font-size: 15px;
+            padding: 7px;
+            justify-content: center;
+
+        }
+        
+        .footer-title {
+            font-size: 15px;
+            text-align: center;
+            
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .footer .social-icons {
+            font-size: 10px;
+            
+            
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 }
 
