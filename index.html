@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My Personal Portfolio </title>
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Mohamed Ahmed</a>
+        <nav class="navigation">
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#certification">Certification</a>
+            <a href="#Contact">Contact</a>
+
+
+        </nav>
+    </header>
+
+    <section class="main">
+        <div>
+            <h2>Hi there,I'm Mohamed <br><span data-text="DataMagician...">DataMagician...</span></h2>
+            <h3 id="magical-tools"></h3>
+            <a href="#projects" class="main-btn">View My Work</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mohamedahmed878/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.kaggle.com/mohamedaabdelgani" target="_blank"><i class="fa-brands fa-kaggle"></i></a>
+                <a href="https://github.com/bismohamed" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://www.youtube.com/channel/UCVeBFwFPoYsCK12V54kr0XA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const magicalTools = ["Discover Your Magical Tools.", "Maximize your Profits.", "Find Your Perfect Tools.", "Unleash Your Magical Potential.", "Your Magical Data Finder.", 'Start Data Driven Decisions.'];
+        let index = 0;
+
+        function displayNextTool() {
+            const toolText = magicalTools[index];
+            const toolEl = document.getElementById("magical-tools");
+            let charIndex = 0;
+
+            function type() {
+                const firstWordEndIndex = toolText.indexOf(" ");
+                const firstWord = toolText.substring(0, firstWordEndIndex);
+                const restOfSentence = toolText.substring(firstWordEndIndex);
+
+                if (charIndex < firstWord.length) {
+                    toolEl.innerHTML += `<span class="first-word">${firstWord.charAt(charIndex)}</span>`;
+                    charIndex++;
+                } else if (charIndex < toolText.length) {
+                    toolEl.innerHTML += restOfSentence.charAt(charIndex - firstWord.length);
+                    charIndex++;
+                }
+
+                if (charIndex < toolText.length) {
+                    setTimeout(type, 50); // wait 50 milliseconds before typing the next character
+                } else {
+                    // add any animation class you want to the element
+                    toolEl.classList.add("animate");
+
+                    // wait 2 seconds before hiding the text
+                    setTimeout(() => {
+                        toolEl.classList.remove("animate");
+                        toolEl.innerHTML = "";
+                        index = (index + 1) % magicalTools.length;
+                        displayNextTool();
+                    }, 3000);
+                }
+            }
+
+            type();
+        }
+
+        // start displaying the tools
+        displayNextTool();
+
+    </script>
+
+
+    <section class="cards" id="services">
+        <h2 class="title">Services</h2>
+        <div class="content">
+
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="info">
+                    <h3>Data Analysis for Actionable Insights</h3>
+                    <p>Unlock new business insights with data analysis across any domain, empowering better
+                        decision-making based on historical data</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                </div>
+                <div class="info">
+                    <h3>A/B Testing</h3>
+                    <p>This option emphasizes the specific benefit of boosting conversions - turning more website
+                        visitors into customers through A/B testing. </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="info">
+                    <h3>ChatBots</h3>
+                    <p>Transform your customer interactions with ChatBots. chatbot can engage customers in new and
+                        exciting ways. By leveraging the latest in AI technology, you can create memorable experiences
+                        that keep customers coming back for more.</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-chalkboard"></i>
+                </div>
+                <div class="info">
+                    <h3>Tutoring </h3>
+                    <p>Gain expertise in data analysis and data science with personalized tutoring services. I can help you master the skills you need to succeed in these fields. With practical
+                        examples and real-world experience to achieve your goals.</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-file-code"></i>
+                </div>
+                <div class="info">
+                    <h3>Personal Website</h3>
+                    <p>Showcase your skills and accomplishments with a personalized website. Whether you're a
+                        freelancer, job seeker, or simply want to establish your online presence, a personal website is
+                        a powerful tool to connect with potential clients or employers.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-spider"></i>
+                </div>
+                <div class="info">
+                    <h3>Web Scrapping </h3>
+                    <p>Our web scraping services help you gather valuable information from websites quickly and
+                        efficiently, allowing you to make data-driven decisions for your business. Whether you need to
+                        scrape data for market research, competitor analysis, or any other purpose, I can help
+                        you get the job done.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+
+        <h2 class="title">Projects</h2>
+        <div class="content">
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-lock-open"></i>
+                    </div>
+                    <p>All Of My Projects Are Available On Github <a href="https://github.com/bismohamed"
+                            target="_blank">Just Click Here.</a></p>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="certification" id="certification">
+        <h2 class="title">Certifications</h2>
+        <div class="certification-image1">
+            <i class="fa-solid fa-certificate"></i>
+        </div>
+        <div class="content">
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_1.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>UDACITY Pro</span>
+                        <a href="https://graduation.udacity.com/confirm/LC9ZWQVD" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_2.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>FreeCodeCamp</span>
+                        <a href="https://www.freecodecamp.org/certification/Mohamed_Abd_Elgani/data-analysis-with-python-v7" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_3.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>365 Data</span>
+                        <a href="https://learn.365datascience.com/certificates/CC-0594B45EC1/" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_4.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>Kaggle</span>
+                        <a href="https://www.kaggle.com/learn/certification/mohamedaabdelgani/intro-to-machine-learning" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_5.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>Hacker Rank</span>
+                        <a href="https://www.hackerrank.com/certificates/e536fd78f976"  target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_6.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>Udacity-FWD</span>
+                        <a href="https://s3-us-west-2.amazonaws.com/udacity-printer/production/certificates/94c192fa-80ed-4967-823c-5e84d6c14c94.pdf" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_7.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>Hacker Rank</span>
+                        <a href="https://www.hackerrank.com/certificates/80ea0bfb53bc" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_8.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>Kaggle</span>
+                        <a href="https://www.kaggle.com/learn/certification/mohamedaabdelgani/pandas" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_9.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>Hakerrank-sql</span>
+                        <a href="https://www.hackerrank.com/certificates/9a09165004bd" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_10.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>data camp</span>
+                        <a href="https://www.datacamp.com/statement-of-accomplishment/course/f8f66f659dc6588b9620d365d8c3392e34f0d5c5?raw=1" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_11.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>data camp</span>
+                        <a href="https://www.datacamp.com/statement-of-accomplishment/course/c4abc03a81c0c9e495c8b8cd18e7383a21ff8603?raw=1" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_12.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>data camp</span>
+                        <a href="https://www.datacamp.com/statement-of-accomplishment/course/a2797a0a2a8def28a306e2aaef7f5ca97ca5ffeb?share=true" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_13.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>data camp</span>
+                        <a href="https://www.datacamp.com/statement-of-accomplishment/course/3942ea1cfbc921de52cf45736d4a18ef8069da17?share=true" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="images\cert_14.png" />
+                </div>
+                <div class="cert-info">
+                    <strong class="cert-title">
+                        <span>data camp</span>
+                        <a href="https://www.datacamp.com/statement-of-accomplishment/course/b7b43ab20aea953f9b102fcff5fc4c1e8ee04521?raw=1" target="_blank" class="more-details">More Details</a>
+                    </strong>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<section class="cards contact" id="Contact">
+    <h2 class="title">Let's Work Together</h2>
+    <div class="content">
+    <div class="card">
+        <div class="icon">
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="info">
+            <h3>Phone [whats app]</h3>
+            <strong>+2 01098557840</strong>
+        </div>
+    </div>
+    <div class="card">
+        <div class="icon">
+            <i class="fa-solid fa-envelope-open-text"></i>
+        </div>
+        <div class="info">
+            <h3>E-Mail </h3>
+            <strong>mohamed.a.abdelgani@gmail.com</strong>
+        </div>
+    </div>
+</div>
+</section>
+<footer class="footer">
+    <p class="footer-title">Copyrights @ <span>Mohamed Ahmed, GPT3, Codezilla</span></p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/mohamedahmed878/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.kaggle.com/mohamedaabdelgani" target="_blank"><i class="fa-brands fa-kaggle"></i></a>
+        <a href="https://github.com/bismohamed" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+        <a href="https://www.youtube.com/channel/UCVeBFwFPoYsCK12V54kr0XA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>    
+
+</footer>
+
+
+    
+
+
+
+
+</body>
+
+</html>
