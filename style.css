@@ -289,7 +289,7 @@ section {
     
     
     background-color: rgb(20, 19, 19);
-    background: url(images/joshua-rivera-usmhPmT5sj0-unsplash.jpg) no-repeat;
+    background: rgb(0, 5, 5) ;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -568,6 +568,27 @@ section {
   cursor: pointer;
   transform: scale(1.1);
 }
+/* make the badge in the center */
+
+.creadly {
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  margin: 10% auto;
+  font-size: 1.5em;
+  font-weight: 600;
+  background-color: #ffffff;
+  width: fit-content;
+  height: fit-content;
+}
+.creadly :hover{
+  color: #18b8f8;
+  cursor: pointer;
+  border: #18b8f8 solid 2px;
+  border-radius: 15px;
+}
+
+
 
 /* @media (max-width:250px){
     header{
