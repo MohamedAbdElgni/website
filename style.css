@@ -283,11 +283,7 @@ section {
     font-size: 30px;
 }
 
-.certification-image1 {
-    color: #08a5e3;
-    font-size: 5em;
-    text-align: center;
-}
+
 
 .certification {
     
@@ -303,54 +299,9 @@ section {
     margin-top: 30px;
 }
 
-.cert-card {
-    background-color: #ffffff;
-    border: 3.5px solid #18b8f8;
-    min-height: 14em;
-    width: 23em;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 20px;
-    transition: 0.7s ease;
 
-}
 
-.cert-card:hover {
-    transform: scale(1.25);
-}
 
-.cert-card:hover .cert-img {
-    opacity: 0.9;
-}
-
-.cert-img img {
-    width: 100%;
-}
-
-.cert-info {
-    padding: .05em;
-}
-
-.cert-title {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-top: 5px;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.more-details {
-    text-decoration: none;
-    color: #0b7fad;
-
-}
-
-.more-details:hover {
-    color: #342ef3;
-}
 .contact .icon{
     font-size: 3em;
 
@@ -411,9 +362,6 @@ section {
     .navigation{
         padding-left: 10px;
         position:-webkit-sticky;
-
-
-        
     }
     
     .title{
@@ -555,7 +503,73 @@ section {
     
 }
 
-@media (max-width:250px){
+.gallery{
+    width: 1500px;
+    display: flex ;
+    overflow: scroll;
+
+}
+
+.gallery div{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  grid-gap: 20px;
+  padding: 10px;
+  flex: none;
+  
+
+}
+
+.gallery div img{
+  width: 100%;
+  transition: transform 0.5s ease-in-out; 
+  padding: auto; 
+  
+
+}
+
+.gallery div img:hover{
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.gallery::-webkit-scrollbar{
+  display: none ;
+}
+
+.gallary-wrap{
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  margin: 10% auto;
+}
+
+#backbtn, #nextbtn{
+  width:50px;
+  margin:40px;
+  cursor: pointer;
+}
+
+.dis img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out; 
+  padding: auto; 
+  border-radius: 15px ;
+  
+
+}
+
+.dis img:hover{
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* @media (max-width:250px){
     header{
         background-color: rgb(20, 19, 19);
         width: 100%;
@@ -850,4 +864,4 @@ section {
             margin-bottom: 10px;
         }
 }
-
+ */
